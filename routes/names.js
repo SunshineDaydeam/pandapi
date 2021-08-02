@@ -6,11 +6,11 @@ module.exports = (app) => {
   app.get('*', (req, res) => {
 
     // console.log(firstNames.length, lastNames.length)
-    const firstIndex = Math.floor(Math.random() * firstNames.length) + 1
-    const lastIndex = Math.floor(Math.random() * lastNames.length) + 1
+    const firstIndex = Math.floor(Math.random() * lastNames.length) + 1
+    const lastIndex = Math.floor(Math.random() * firstNames.length) + 1
 
-    let firstName = firstNames[firstIndex]
-    let lastName = lastNames[lastIndex]
+    let firstName = lastNames[firstIndex]
+    let lastName = firstNames[lastIndex]
 
     let obj = {
       fullName: firstName + " " + lastName,
